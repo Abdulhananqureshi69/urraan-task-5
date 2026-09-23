@@ -4,11 +4,15 @@
     box-sizing: border-box;
 }
 
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 body {
     background-color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
     color: #333;
-    overflow-x: hidden;
 }
 
 .page {
@@ -22,18 +26,19 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 .top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 0px 0px;
+    padding: 0px;
 }
 
 .logo {
-    max-width: 800px;
-    height: 200px;
+    max-width: 100%;
+    height: auto;
 }
 
 .phone {
@@ -74,6 +79,7 @@ nav {
     margin-top: 10px;
     width: 100%;
     padding-right: 48px;
+    box-sizing: border-box;
 }
 
 nav a {
@@ -100,6 +106,7 @@ nav a:hover {
     gap: 1.5%;
     padding: 50px 40px 0 40px;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .hero-image img {
@@ -116,8 +123,6 @@ nav a:hover {
     background: #f0f0f0 url("form_bg.jpg") center center / cover no-repeat;
     display: flex;
     flex-direction: column;
-    transform: scaleX(1.02);
-    transform-origin: left;
 }
 
 .question-head {
@@ -242,6 +247,7 @@ nav a:hover {
     margin-top: 15px;
     align-items: start;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .box {
@@ -442,6 +448,7 @@ nav a:hover {
     padding: 50px 20px 50px;
     width: 100%;
     align-items: start;
+    box-sizing: border-box;
 }
 
 .left h2 {
@@ -598,7 +605,6 @@ footer {
 
 @media (min-width: 601px) and (max-width: 1024px) {
     .page {
-        width: 100%;
         border-left: 8px solid #7a7d82;
         border-right: 8px solid #7a7d82;
     }
@@ -636,6 +642,8 @@ footer {
         justify-content: center;
         flex-wrap: wrap;
         padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     nav a {
@@ -644,14 +652,25 @@ footer {
     }
 
     .hero {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         gap: 30px;
         padding: 30px 20px 0;
+        box-sizing: border-box;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-image img {
+        max-width: 100%;
+        height: auto;
     }
 
     .question {
-        transform: none;
         padding: 20px;
+        box-sizing: border-box;
     }
 
     .form-area {
@@ -694,10 +713,36 @@ footer {
     }
 
     .middle {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         gap: 40px;
         padding: 40px 20px;
         background: none;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .box {
+        width: 100%;
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+
+    .dui h3 {
+        font-size: 18px;
+        word-wrap: break-word;
+    }
+
+    .dui p {
+        max-width: 100%;
+        white-space: normal;
+        word-wrap: break-word;
+    }
+
+    .clipboard {
+        width: 80px;
+        right: 10px;
+        top: 40px;
     }
 
     .center {
@@ -705,15 +750,16 @@ footer {
         border-top: 2px solid #ddd;
         border-bottom: 2px solid #ddd;
         padding: 20px 0;
+        width: 100%;
+    }
+
+    .badges {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .center-text {
         width: 60%;
-    }
-
-    .clipboard {
-        right: 20px;
-        top: 40px;
     }
 
     .dui p, .credentials p {
@@ -722,9 +768,12 @@ footer {
     }
 
     .lower {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         gap: 40px;
         padding: 40px 20px;
+        box-sizing: border-box;
+        overflow-x: hidden;
     }
 
     .menu-area {
@@ -784,6 +833,7 @@ footer {
         padding: 5px;
         justify-content: center;
         flex-wrap: wrap;
+        box-sizing: border-box;
     }
 
     nav a {
@@ -792,19 +842,26 @@ footer {
     }
 
     .hero {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         padding: 25px 12px 0;
         gap: 20px;
+        box-sizing: border-box;
+    }
+
+    .hero-image {
+        width: 100%;
     }
 
     .hero-image img {
-        width: 100%;
+        max-width: 100%;
+        height: auto;
     }
 
     .question {
         width: 100%;
         padding: 12px;
-        transform: none;
+        box-sizing: border-box;
     }
 
     .question-head {
@@ -876,10 +933,13 @@ footer {
     }
 
     .middle {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         gap: 25px;
         padding: 30px 15px;
         background: none;
+        box-sizing: border-box;
+        overflow-x: hidden;
     }
 
     .box h2 {
@@ -946,8 +1006,7 @@ footer {
         white-space: normal;
     }
 
-    .middle-button::before,
-    .small-button::before {
+    .middle-button::before, .small-button::before {
         left: 20px;
         width: calc(100% - 40px);
     }
@@ -962,9 +1021,12 @@ footer {
     }
 
     .lower {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         gap: 30px;
         padding: 35px 15px;
+        box-sizing: border-box;
+        overflow-x: hidden;
     }
 
     .left h2, .content h1, .side-block h2 {
