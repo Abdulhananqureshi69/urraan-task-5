@@ -56,7 +56,7 @@
 }
 
 .headtext p {
-    font-size: 27px;
+    font-size: 26px;
 }
 
 .headtext hr {
@@ -224,7 +224,7 @@ a:hover {
 .formimg img {
     transform: rotate(13deg);
     margin-top: 40px;
-    width: 90%;
+    width: 89%;
 }
 
 .textarea1 {
@@ -375,7 +375,7 @@ a:hover {
 .m13 img {
     width: 80%;
     height: 90%;
-    top: 15px;
+    margin-top: -80px;
 }
 
 .m14 {
@@ -436,7 +436,6 @@ a:hover {
 .m221 {
     width: 50%;
     height: 100%;
-   
 }
 
 .m211 p {
@@ -448,7 +447,6 @@ a:hover {
 }
 
 .m221 img {
-    
     width: 84%;
 }
 
@@ -648,7 +646,7 @@ a:hover {
 }
 
 .leftsection h3 {
-    font-size: 39px;
+    font-size: 25px;
     padding-left: 8px;
 }
 
@@ -802,7 +800,7 @@ a:hover {
 
 .rightimg {
     width: 100%;
-    height: 250px;
+    height: 300px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -850,11 +848,12 @@ a:hover {
 .f3 {
     width: 100%;
     height: 55%;
+    margin-left: 0px;
 }
 
 .f1 h2 {
-    font-size: 28px;
-    padding-left: 40px;
+    font-size: 20px;
+    padding-left: 50px;
 }
 
 .f1 span {
@@ -862,7 +861,8 @@ a:hover {
 }
 
 .f2 img {
-    width: 82%;
+    width: 95%;
+    margin-left: 0px;
 }
 
 .f3 img {
@@ -898,7 +898,7 @@ a:hover {
     .head1 img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
     }
 
     .nav {
@@ -1098,22 +1098,29 @@ a:hover {
     .headtext {
         margin-top: 15px;
         margin-right: 15px;
+        align-items: flex-end;
+        text-align: right;
     }
 
     .headtext h2 {
         font-size: 24px;
+        text-align: right;
     }
 
     .headtext h6 {
         font-size: 50px;
+        text-align: right;
     }
 
     .headtext p {
         font-size: 21px;
+        text-align: right;
     }
 
     .headtext hr {
         width: 280px;
+        margin-left: auto;
+        margin-right: 0;
     }
 
     .nav {
@@ -1206,6 +1213,7 @@ a:hover {
         width: 100%;
         grid-column-end: 2;
         height: 100%;
+        padding-left: 40px;
     }
 
     .main3132 img {
@@ -1352,6 +1360,7 @@ a:hover {
     }
 
     .rightsection {
+        position: relative;
         grid-row-start: 2;
         grid-row-end: 3;
         grid-column-start: 1;
@@ -1390,50 +1399,84 @@ a:hover {
     }
 
     .right10 {
-        padding-left: 10px;
+        padding-left: 30px;
         padding-right: 10px;
         font-size: 12px;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        justify-content: flex-start;
+        align-items: flex-start;
     }
 
     .right11 {
-        padding-left: 10px;
+        padding-left: 30px;
         padding-right: 10px;
         font-size: 17px;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        justify-content: flex-start;
+        align-items: flex-start;
     }
 
     .btnright {
         display: flex;
-        margin-left: 90px;
-        justify-content: center;
+        margin-left: 40px;
+        justify-content: flex-start;
         align-items: center;
+        width: 30%;
+        padding-left: 40px;
     }
 
+    .rightimg {
+    position: absolute;          
+    left: 110px;                 
+    top: 220px;                   
+    display: flex;
+    flex-direction: column;         
+    gap: 20px;                   
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    z-index: 10;
+}
     .rightimg1 img {
-        width: 20%;
+        width: 30%;
         margin-left: 350px;
         margin-right: auto;
     }
 
     .rightimg2 img {
-        width: 20%;
+        width: 30%;
         margin-right: auto;
         margin-left: 350px;
     }
 
     .f1 h2 {
-        font-size: 22px;
-        padding-left: 25px;
+        font-size: 35px;
+        padding-left: 410px;
+    }
+    .f2 img{
+        width: 55%;
+        margin: 0 auto;
+        display: block;
+        margin-right: 155px;
     }
 
-    .f3 img {
-        width: 10%;
-    }
+    .f3 {
+    text-align: right;         
+    width: 100%;
+    margin-top: -10px;
+    padding-right: 210px;       
+}
+
+.f3 img {
+    width: 40px;               
+    height: 32px;
+    object-fit: contain;
+    margin: 0 2px;             
+    padding-left: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
 }
 
 @media (max-width: 768px) {
@@ -1454,13 +1497,22 @@ a:hover {
     .header {
         height: auto;
         min-height: 150px;
-        flex-direction: column;
+        align-items: center;
+        
     }
 
-    .head1,
-    .head2 {
-        width: 100%;
+    .head1{
+        width: 35%;
         height: auto;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .head2 {
+        width: 65%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .head1 img {
@@ -1469,26 +1521,41 @@ a:hover {
     }
 
     .headtext {
-        margin: 15px 10px;
+        margin: 10px 0;
+        padding: 0;
         width: 100%;
-        align-items: center;
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        
     }
 
     .headtext h2 {
         font-size: 22px;
+        text-align: right;
+        width: 100%;
+        white-space: nowrap;
     }
 
     .headtext h6 {
-        font-size: 45px;
+        font-size: 38px;
+        text-align: right;
+        width: 100%;
+        white-space: nowrap;
     }
 
     .headtext p {
-        font-size: 20px;
+        font-size: 17px;
+        text-align: right;
+        width: 100%;
+        white-space: nowrap;
     }
 
     .headtext hr {
         width: 80%;
+        margin-left: auto;
+        margin-right: 0;
     }
 
     .nav {
@@ -1655,13 +1722,15 @@ a:hover {
         justify-content: right;
         display: flex;
         align-items: center;
-        margin: 0 auto;
+        margin: 10px auto 0 auto;
     }
 
     .m21,
     .m22 {
         height: auto;
         min-height: 200px;
+        margin-top: 30px;
+        padding-top: 20px;
     }
 
     .section1 {
@@ -1699,8 +1768,13 @@ a:hover {
 
     .rightimg {
         height: auto;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
+        gap: 0px;
+        margin-left: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
     }
 
     .rightimg1,
@@ -1712,32 +1786,68 @@ a:hover {
     .rightimg1 img,
     .rightimg2 img {
         width: 70%;
-        height: 100%;
+        height: 85%;
+        object-fit: contain;
         margin: 0 auto;
         display: block;
+        align-items: center;
+        justify-content: center;
     }
+
 
     .foot {
-        height: auto;
-    }
-
-    .f1,
-    .f2,
-    .f3 {
-        height: auto;
-        min-height: 50px;
-    }
-
-    .f1 h2 {
-        font-size: 22px;
-        padding-left: 20px;
-    }
-
-    .f3 img {
-        width: 10%;
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;      
+    align-items: center;          
+    width: 100%;
+    height: auto;
+    padding-bottom: 30px;
 }
 
+.f1 {
+    width: 100%;
+    text-align: center;           
+    height: auto;
+    min-height: auto;
+}
+
+.f1 h2 {
+    font-size: 24px;
+    padding-left: 0;              
+}
+
+.f2 {
+    width: 100%;
+    text-align: center;           
+    height: auto;
+    min-height: auto;
+}
+
+.f2 img {
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+.f3 {
+    text-align: center;           
+    width: 100%;
+    margin-top: 10px;
+    height: auto;
+    min-height: auto;
+}
+
+.f3 img {
+    width: 40px;                 
+    height: 35px;
+    object-fit: contain;
+    margin: 0 4px;
+    padding-left: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+}
 @media (max-width: 480px) {
 
     body {
@@ -1745,38 +1855,82 @@ a:hover {
     }
 
     .header {
+         display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
         min-height: auto;
+        padding: 10px 0;
+    }
+     
+    .head1{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5px;
+        padding-left: 20px;
     }
 
     .head1 img {
-        height: 110px;
+        height: 60px;
+        width: auto;
+        object-fit: contain;
+    }
+    .head2{
+        width: 100;
+        height: auto;
+        display: flex;
+        justify-content: center;
     }
 
     .headtext {
-        margin: 10px 5px;
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 10px;
     }
 
     .headtext h2 {
-        font-size: 18px;
-        margin-bottom: 5px;
+        font-size: 13px;
+        text-align: center;
+        margin-bottom: 2px;
+        padding-right: 0;
+        white-space: nowrap;
+        width: 100%;
     }
 
     .headtext h6 {
-        font-size: 32px;
+        font-size: 30px;
+        text-align: center;
+        margin-top: 0;
+        width: 100%;
+        white-space: nowrap;
     }
 
     .headtext p {
-        font-size: 16px;
+        font-size: 12px;
+        text-align: center;
+        width: 100%;
+        white-space: nowrap;
     }
 
     .headtext hr {
-        width: 75%;
-        height: 3px;
+        width: 130%;
+        height: 2px;
+        background-color: black;
+        margin: 2px auto 4px auto;
+        border: none;
     }
 
     .nav {
-        gap: 8px;
+        gap: 6px;
         padding: 8px 5px;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
     .nav a {
@@ -1943,6 +2097,8 @@ a:hover {
 
     .m222 img {
         width: 100%;
+        height: 100px;
+        margin-top: 10px;
     }
 
     .m211 {
@@ -2051,18 +2207,21 @@ a:hover {
 
     .foot {
         display: flex;
-        justify-content: center;
-        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
     }
 
     .f1 h2 {
-        font-size: 19px;
-        padding-left: 10px;
+        font-size: 20px;
+        padding-left: 110px;
     }
 
     .f3 img {
-        width: 10%;
-        padding-left: 10px;
+        width: 15%;
+        text-align: right;
+        padding-bottom: 0;
+        margin: 0;
     }
 }
 
@@ -2146,5 +2305,81 @@ a:hover {
 
     .f1 h2 {
         font-size: 17px;
+    }
+}
+
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+.container {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+.header {
+    min-width: 0;
+}
+
+.head1 {
+    width: 61%;
+    min-width: 0;
+}
+
+.head2 {
+    width: 39%;
+    min-width: 0;
+}
+
+.formsection {
+    width: calc(100% - 60px);
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 0;
+}
+
+.firstpic,
+.secondpic {
+    min-width: 0;
+}
+
+.main {
+    width: calc(100% - 40px);
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 0;
+}
+
+.m1,
+.m2,
+.m3,
+.leftsection,
+.midsection,
+.rightsection {
+    min-width: 0;
+}
+
+@media (max-width: 768px) {
+    .formsection {
+        width: 94%;
+    }
+
+    .main {
+        width: 94%;
+    }
+
+    .rightimg {
+        margin-left: 0;
+    }
+
+    .f1 h2 {
+        padding-left: 0;
     }
 }
